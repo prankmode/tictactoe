@@ -1,2 +1,55 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+$my-blue: #3498db;
+$my-orange: #f0ad4e;
+$font-color: #dfdfdf;
+$white: #fff;
+$black: #000;
+
+body {
+  background-color: $my-blue;
+  color: $font-color;
+}
+
+h1 {
+  padding: 0 0 15px;
+  text-align: center;
+}
+
+p {
+  color: $black;
+}
+
+
+#new-game {
+  display: block;
+  margin: 30px auto;
+}
+
+form {
+  color: $black;
+}
+
+.square {
+  border: solid 3px $my-orange;
+  font-size: 40px;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+}
+
+.square:hover {
+  background: $my-orange;
+}
+
+#board {
+  height: 300px;
+  margin: 0 auto;
+  padding: 0;
+  width: 300px;
+}
+
+#test {
+  margin: 0 auto;
+  width: 400px;
+}

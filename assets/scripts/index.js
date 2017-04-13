@@ -14,8 +14,13 @@ $(() => {
 require('./example')
 
 const authEvents = require('./auth/events.js')
+const gameEvents = require('./game/events.js')
+const game = require('./playGame.js')
+const gameUiEvents = require('./gameUi/events.js')
 
 // On document ready
 $(() => {
   authEvents.addHandlers()
+  gameEvents.addHandlers()
+  gameUiEvents.addHandlers()
 })

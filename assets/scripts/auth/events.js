@@ -6,10 +6,8 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onSignUp = function (event) {
-  console.log('in sign-up')
   // this will be event.target
   const data = getFormFields(this)
-  console.log('data is ', data)
   event.preventDefault()
   api.signUp(data)
     .then(ui.signUpSuccess)
@@ -35,7 +33,6 @@ const onSignOut = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('inside onChangePassword')
   // this will be event.target
   // const data = getFormFields(this)
   // event.preventDefault()
@@ -45,11 +42,18 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
+const onStats = function () {
+  api.allMyGames()
+    .then(ui.statsSuccess)
+    .catch(ui.statsFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
-  $('#sign-out').on('submit', onSignOut)
+  $('#sign-out-button').on('click', onSignOut)
+  $('#stats-button').on('click', onStats)
 }
 
 module.exports = {
