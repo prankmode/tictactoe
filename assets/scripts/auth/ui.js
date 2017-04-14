@@ -5,13 +5,7 @@ const messages = require('../gameUi/messages.js')
 const play = require('../playGame.js')
 
 const signUpSuccess = (response) => {
-  // if they sign up successfully, just log them in
-  store.user = response.user
   gameUi.toggleSignUpButton()
-  gameUi.toggleSignInButton()
-  gameUi.toggleChangePasswordButton()
-  gameUi.toggleStatsButton()
-  gameUi.toggleSignOutButton()
 }
 
 const signUpFailure = (error) => {
@@ -23,7 +17,6 @@ const signInSuccess = (response) => {
   // store the user object
   store.user = response.user
   gameUi.toggleSignInButton()
-  gameUi.toggleSignUpButton()
   gameUi.toggleChangePasswordButton()
   gameUi.toggleStatsButton()
   gameUi.toggleSignOutButton()
