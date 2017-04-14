@@ -72,7 +72,7 @@ const playGame = function (data) {
   // get all the squares in the board
   boxes = $('.square')
   for (let i = 0; i < boxes.length; i++) {
-    boxes[i].innerText = 'T'
+    boxes[i].innerText = ' '
   }
 
   // ready to play?  set up the click handlers
