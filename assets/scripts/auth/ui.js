@@ -69,8 +69,11 @@ const statsSuccess = (data) => {
       }
     }
   }
-  $('#num-games-played')[0].innerText = `you played ${data.games.length} games`
-  $('#num-games-won')[0].innerText = `you won ${howManyWins} of them`
+  // $('#num-games-played')[0].innerText = `you played ${data.games.length} games`
+  // $('#num-games-won')[0].innerText = `you won ${howManyWins} of them`
+
+  document.getElementById('num-games-played').innerText = `you played ${data.games.length} games`
+  document.getElementById('num-games-won').innerText = `you won ${howManyWins} games`
 }
 
 const statsFailure = (error) => {
